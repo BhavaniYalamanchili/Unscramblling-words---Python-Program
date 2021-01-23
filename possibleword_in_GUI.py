@@ -6,7 +6,6 @@ from tkinter import *
 import tkinter as Tk
 
 
-
 def display():
     string = userword.get()
     comb_of_str = [''.join(l) for i in range(len(string)) for l in combinations(string, i+1)]
