@@ -1,6 +1,6 @@
 from itertools import permutations
 from itertools import combinations
-from english_words import english_words_set
+from english_words import english_words_set 
 import tkinter
 from tkinter import *
 import tkinter as Tk
@@ -25,6 +25,7 @@ def display():
                 listb.insert(num,i)
                 num += 1
 
+#clearing all the text in entry box and listbox
 def res():
     userword.delete(0, END)
     listb.delete(0, END)
@@ -32,11 +33,11 @@ def res():
 
 #creating the window
 window = tkinter.Tk()
-window.title("Possible Words")
+window.title("All Possible Words")
 window.geometry("350x400+400+300")
 window.configure(background = "#131212")
 
-
+#label
 lbluserword = Label(window,
                     text = "Enter letters",
                     font = ("Verdana",18),
@@ -45,10 +46,11 @@ lbluserword = Label(window,
                     )
 lbluserword.pack(pady = 30,ipady = 10,ipadx = 10)
 
+#Entry Box
 userword = Entry(window,font = ("Verdana",16))
 userword.pack(ipady = 5, ipadx = 5)
 
-
+#Button for getting all the posible words
 btncheck = Button(
     window,
     text = "Show All possible words",
@@ -61,7 +63,7 @@ btncheck = Button(
 btncheck.pack(pady = 40)
 
 
-
+#List box
 listb = Listbox(window,
               font = ("Verdana",18),
               bg = "#4C4B4B",
@@ -69,6 +71,7 @@ listb = Listbox(window,
               )
 listb.pack()
 
+#Reset button for clearing text in entry box and list box
 btnreset = Button(
     window,
     text = "Reset",
