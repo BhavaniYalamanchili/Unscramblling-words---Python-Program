@@ -82,7 +82,6 @@ btnreset = Button(
     )
 btnreset.pack(pady = 30)
 
-
 window.mainloop()
 
 
